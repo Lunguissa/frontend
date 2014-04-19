@@ -1,0 +1,46 @@
+<?page title="Mesa de Votos" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Mesa de Votos" border="normal" width = "400px" height ="400px"  apply="mz.co.Lunguissa.controller.Controller">
+<grid vflex="1">
+	<columns>
+		<column label=" " width="200px"/>
+		<column width="200px"/>
+	</columns>
+	<rows>
+		<row>
+			<label value="provincia: "/>
+			<combobox>
+				<comboitem label ="Maputo cidade"/>
+				<comboitem label ="Maputo provincia"/>
+				<comboitem label ="Gaza"/>
+				<comboitem label ="Inhambane"/>
+				<comboitem label ="Sofala"/>
+				<comboitem label ="Manica"/>
+				<comboitem label ="Zambezia"/>
+				<comboitem label ="Tete"/>
+				<comboitem label ="Nampula"/>
+				<comboitem label ="Cabo Delgado"/>
+				<comboitem label ="Niassa"/>
+			</combobox>	
+		</row>
+		<row>
+			<label value="Distrito"/>
+			<textbox id = "dis" maxlength="20"/>	
+		</row>
+		<row>
+			<label value="localidade"/>
+			<textbox id="local" maxlength="20"/>	
+		</row>
+		<row>
+			<label value="numero de votos"/>
+			<textbox id="nrVotos" maxlength="20"/>	
+		</row>
+	</rows>
+</grid>
+
+	
+		<button id="btnOK" label="ok" />
+
+
+</window>
+</zk>
