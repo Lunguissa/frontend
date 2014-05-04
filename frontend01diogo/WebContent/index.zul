@@ -1,0 +1,110 @@
+<?page title="Gestao Salao"?>
+
+<zk>
+
+
+<window apply="mz.co.Lunguissa.Controler.Action" id="TReg"  border="3d" width="600px" height="500px" position="center" mode="overlapped" closable="true" defaultActionOnShow="appear" minimizable="true" >
+
+<style src="estilo1.css"></style> 
+
+<div >
+
+<box height="600px" width="600px"   style="background-color:#EBEBEB;">
+
+<hbox spacing="130px" height="80px">
+ <label value=" " style="color:gray;background-color:#EBEBEB"></label>
+<label value="Marcacoes de Clientes" width="50px" height="50px"> </label>
+
+
+</hbox>
+
+<hbox height="160px">
+<vbox  >
+	<hbox spacing="70px">
+		<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+		<label value="Clientes :"  width="50px" height="50px"  style="font-size:18px"></label>
+	</hbox>
+	<hbox spacing="70px">
+		<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+		<label value="Tipo de Servico :"  width="50px" height="50px"  style="font-size:18px"></label>
+	</hbox>
+	<hbox spacing="70px">
+		<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+		<label value="Hora a Marcar :"  width="50px" height="50px"  style="font-size:18px"></label>
+	</hbox>
+		
+</vbox>
+
+<vbox  >
+		<hbox spacing="30px">
+		<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+		<combobox id="cbxClientes" autocomplete="true"  width="200px" >
+		</combobox>
+		</hbox>
+		<hbox spacing="30px">
+		<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+		<combobox id="cbxServico" autocomplete="true"  width="200px" >
+		</combobox>
+		</hbox>
+		<hbox spacing="30px">
+		<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+		 <datebox id="dtHora" cols="20" format="yyyy/MM/dd a hh:mm:ss"  onCreate="self.value = new Date()"/>
+		</hbox>
+		<hbox spacing="30px">
+		<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+		<button id="btnMarcar" label="Marcar Horario"  width="196px" height="50px"  style="font-size:18px"></button>
+	</hbox>
+		<zscript>
+	String[] _dict = { 
+		"Lavagem"," desfilagem" ,"Corte de Cabelo"
+	};
+	 ListModel dictModel= new SimpleListModel(_dict);
+	 cbxServico.setModel(dictModel);
+	 
+	</zscript>
+		
+</vbox>
+</hbox>
+
+<hbox spacing="180px" height="80px">
+ <label value=" " style="color:gray;background-color:#EBEBEB"></label>
+<label value="Novos Clientes" width="50px" height="50px"> </label>
+
+</hbox>
+<hbox>
+	<vbox >
+	<hbox spacing="70px">
+	<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+	<label value="Nome :"  width="50px" height="50px"  style="font-size:18px"></label>
+	</hbox>
+	<hbox spacing="70px">
+	<label value=" " style="color:gray;background-color:#EBEBEB"></label>
+	<label value="Numero de Telefone :"  width="50px" height="50px"  style="font-size:18px"></label>
+	</hbox>
+	
+	
+	</vbox>
+	
+	<vbox >
+	<hbox spacing="30px">
+	<textbox id="txtNome" maxlength="200" width="300px" height="30px"></textbox>
+	</hbox>
+	<hbox spacing="30px">
+	<textbox id="txtNumero" maxlength="200" width="200px" height="30px"></textbox>
+	</hbox>
+	<hbox spacing="30px">
+	<button id="btnInserir" label="Inserir Novo Cliente"  width="196px" height="50px"  style="font-size:18px"></button>
+	</hbox>
+	
+	</vbox>
+
+</hbox>
+
+
+</box>
+	
+</div>
+
+</window>
+
+</zk>
